@@ -3,43 +3,49 @@ body {
     background-color: #fafafa;
 }
 
-/* Navbar e Iconos */
-.navbar-brand span {
-    font-size: 1.2rem;
+/* Navbar */
+.navbar {
+    padding: 0.5rem 0;
 }
 
 /* Botones de Vista (Pills) */
 .btn-view {
     color: #a0a0a0 !important;
     background-color: transparent !important;
+    border: none !important;
+    font-size: 1.2rem;
 }
 
 .btn-view.active {
-    color: #0d6efd !important; /* Azul como en el diseño */
+    color: #0d6efd !important; /* Azul de selección */
 }
 
-/* Imágenes del Grid */
+/* Imágenes del Grid 3x3 */
 .img-grid {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-/* Tarjetas estilo Instagram */
+/* Tarjetas (Feed de 1 columna) */
 .post-card {
     border: 1px solid #dbdbdb;
-    border-radius: 3px;
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    overflow: hidden;
 }
 
 .post-card .card-header {
     border-bottom: 1px solid #efefef;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.post-card .card-body p {
-    color: #262626;
+.post-card .card-body {
+    background-color: white;
 }
 
-/* Ajustes del Modal */
-.modal-content {
-    border-radius: 8px;
+/* Botón modal verde */
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
 }
