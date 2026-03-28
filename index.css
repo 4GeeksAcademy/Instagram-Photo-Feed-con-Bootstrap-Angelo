@@ -1,55 +1,96 @@
-/* Ajustes generales */
+/* --- Estilos Generales --- */
 body {
     background-color: #fafafa;
 }
 
-/* Navbar: Se eliminó el limite de ancho para que llegue a las esquinas */
+/* --- NAVBAR REFINADA --- */
+.navbar {
+    /* Reemplazamos bg-light o #f8f9fa por este color oscuro */
+    background-color: #2b3a4a !important; /* Nuevo color de fondo oscuro */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+/* Espaciado del container-fluid para que toque los bordes laterales */
 .navbar .container-fluid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Cambiar el color del texto y logo de Instagram a blanco */
+.navbar-brand {
+    color: white !important;
+}
+.navbar-brand:hover {
+    color: #e0e0e0 !important;
+}
+
+/* --- Botones --- */
+.btn-custom-green {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-custom-green:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* --- Dropdown Estilo Captura (Engranaje) --- */
+.custom-dropdown-btn {
+    background-color: #6c757d !important;
+    border: none;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+}
+
+.custom-dropdown-menu {
+    border-radius: 0; /* Bordes rectos */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown-menu .dropdown-item {
+    font-size: 0.9rem;
+    color: #333;
+    padding: 8px 15px;
+}
+
+.text-custom-danger {
+    color: #dc3545 !important;
+}
+
+/* --- Tabs --- */
+.toggle-btn {
+    color: #6c757d;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.nav-pills .nav-link.active.toggle-btn {
+    color: #0d6efd;
+    background: transparent !important;
+}
+
+/* --- Vista de Cuadrícula (3x3) --- */
+.grid-img {
     width: 100%;
-}
-
-/* Botones de Vista (Pills) */
-.btn-view {
-    color: #a0a0a0 !important;
-    background-color: transparent !important;
-    border: none !important;
-    font-size: 1.3rem;
-}
-
-.btn-view.active {
-    color: #0d6efd !important;
-}
-
-/* Imagenes del Grid */
-.img-grid {
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    display: block;
 }
 
-/* Estilo de Tarjeta IG */
+/* --- Tarjetas del Feed (Una por fila) --- */
 .post-card {
-    background-color: white;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
+    border-radius: 0;
 }
 
 .post-card .card-header {
-    border-bottom: 1px solid #efefef;
+    border-bottom: none;
 }
 
-/* Botón Gear (Gris) */
-.btn-secondary {
-    background-color: #6c757d;
-    border: none;
-}
-
-/* Botón Create (Verde) */
-.btn-success {
-    background-color: #198754;
-}
-
-/* Quitar la flecha del dropdown si lo prefieres mas limpio */
-.dropdown-toggle::after {
-    display: none;
+.post-card img {
+    border-radius: 0;
 }
