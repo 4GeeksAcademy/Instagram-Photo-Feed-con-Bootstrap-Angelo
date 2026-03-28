@@ -12,7 +12,7 @@
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-light bg-white border-bottom sticky-top py-3">
+    <nav class="navbar sticky-top py-3">
         <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
             <a class="navbar-brand d-flex align-items-center m-0" href="#">
                 <i class="bi bi-instagram me-2 fs-4"></i>
@@ -20,39 +20,39 @@
             </a>
 
             <div class="d-flex align-items-center gap-2">
-                <button class="btn btn-success fw-semibold" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                <button class="btn btn-custom-green fw-semibold" data-bs-toggle="modal" data-bs-target="#createPostModal">
                     Create a new post
                 </button>
 
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    <button class="btn custom-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-gear-fill"></i>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-sm mt-2">
+                    <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu shadow-sm mt-2">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Accesibility</a></li>
                         <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        <li><a class="dropdown-item text-custom-danger" href="#">Log out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid bg-white border-bottom py-2 mb-4">
+    <div class="view-selector-container border-bottom mb-4">
         <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item">
-                <button class="nav-link btn-view" id="pills-grid-tab" data-bs-toggle="pill"
+                <button class="nav-link view-tab-btn" id="pills-grid-tab" data-bs-toggle="pill"
                     data-bs-target="#pills-grid">
                     <i class="bi bi-grid-3x3"></i>
                 </button>
             </li>
             <li class="nav-item">
-                <button class="nav-link active btn-view" id="pills-feed-tab" data-bs-toggle="pill"
+                <button class="nav-link active view-tab-btn" id="pills-feed-tab" data-bs-toggle="pill"
                     data-bs-target="#pills-feed">
                     <i class="bi bi-square-fill"></i>
                 </button>
@@ -64,12 +64,12 @@
 
         <div class="tab-pane fade container" id="pills-grid">
             <div class="row g-3">
-                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/237/400" class="img-grid" alt="1"></div></div>
-                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/1/400" class="img-grid" alt="2"></div></div>
-                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/10/400" class="img-grid" alt="3"></div></div>
-                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/64/400" class="img-grid" alt="4"></div></div>
-                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/43/400" class="img-grid" alt="5"></div></div>
-                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/26/400" class="img-grid" alt="6"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/237/400" class="grid-img" alt="1"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/1/400" class="grid-img" alt="2"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/10/400" class="grid-img" alt="3"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/64/400" class="grid-img" alt="4"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/43/400" class="grid-img" alt="5"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1"><img src="https://picsum.photos/id/26/400" class="grid-img" alt="6"></div></div>
             </div>
         </div>
 
@@ -77,79 +77,28 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 col-lg-6">
-
                         <div class="card mb-5 post-card shadow-sm">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
+                            <div class="card-header d-flex justify-content-between align-items-center py-2 px-3">
                                 <h5 class="m-0 fs-6 fw-bold">My Crazy dog Spark!</h5>
                                 <small class="text-muted">08/26</small>
                             </div>
-                            <img src="https://picsum.photos/id/237/800/600" class="card-img-top rounded-0" alt="Dog">
+                            <img src="https://picsum.photos/id/237/800/600" alt="Dog">
                             <div class="card-body py-2 px-3">
                                 <p class="mb-1 fw-bold">204 Likes</p>
                                 <p class="mb-0 small">This is an example of a very good photo that you can post on instagram</p>
                             </div>
                         </div>
-
                         <div class="card mb-5 post-card shadow-sm">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
+                            <div class="card-header d-flex justify-content-between align-items-center py-2 px-3">
                                 <h5 class="m-0 fs-6 fw-bold">The greatness of Croatia</h5>
                                 <small class="text-muted">04/09</small>
                             </div>
-                            <img src="https://picsum.photos/id/10/800/600" class="card-img-top rounded-0" alt="Croatia">
+                            <img src="https://picsum.photos/id/10/800/600" alt="Croatia">
                             <div class="card-body py-2 px-3">
                                 <p class="mb-1 fw-bold">26985 Likes</p>
                                 <p class="mb-0 small">Missing this amazing view. Instagram-ready shot!</p>
                             </div>
                         </div>
-
-                        <div class="card mb-5 post-card shadow-sm">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
-                                <h5 class="m-0 fs-6 fw-bold">Amazing GOAL by Cristiano!</h5>
-                                <small class="text-muted">06/12</small>
-                            </div>
-                            <img src="https://picsum.photos/id/26/800/600" class="card-img-top rounded-0" alt="Cristiano">
-                            <div class="card-body py-2 px-3">
-                                <p class="mb-1 fw-bold">1,204,500 Likes</p>
-                                <p class="mb-0 small">Best goal of the season. Pure class!</p>
-                            </div>
-                        </div>
-
-                        <div class="card mb-5 post-card shadow-sm">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
-                                <h5 class="m-0 fs-6 fw-bold">Study Session</h5>
-                                <small class="text-muted">01/15</small>
-                            </div>
-                            <img src="https://picsum.photos/id/1/800/600" class="card-img-top rounded-0" alt="Study">
-                            <div class="card-body py-2 px-3">
-                                <p class="mb-1 fw-bold">150 Likes</p>
-                                <p class="mb-0 small">Coding all night long. Best project ever!</p>
-                            </div>
-                        </div>
-
-                        <div class="card mb-5 post-card shadow-sm">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
-                                <h5 class="m-0 fs-6 fw-bold">Keep Smiling</h5>
-                                <small class="text-muted">02/10</small>
-                            </div>
-                            <img src="https://picsum.photos/id/64/800/600" class="card-img-top rounded-0" alt="Smile">
-                            <div class="card-body py-2 px-3">
-                                <p class="mb-1 fw-bold">1,020 Likes</p>
-                                <p class="mb-0 small">A smile is the best makeup any girl can wear.</p>
-                            </div>
-                        </div>
-
-                        <div class="card mb-5 post-card shadow-sm">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
-                                <h5 class="m-0 fs-6 fw-bold">Paris Vibe</h5>
-                                <small class="text-muted">07/20</small>
-                            </div>
-                            <img src="https://picsum.photos/id/43/800/600" class="card-img-top rounded-0" alt="Paris">
-                            <div class="card-body py-2 px-3">
-                                <p class="mb-1 fw-bold">5,000 Likes</p>
-                                <p class="mb-0 small">Taking pictures under the Eiffel Tower.</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -181,5 +130,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
