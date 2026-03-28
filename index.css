@@ -1,80 +1,82 @@
 /* --- Estilos Generales --- */
 body {
     background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* --- NAVBAR REFINADA --- */
+/* --- NAVBAR REFINADA (Transparente con texto Negro) --- */
 .navbar {
-    /* Reemplazamos bg-light o #f8f9fa por este color oscuro */
-    background-color: #2b3a4a !important; /* Nuevo color de fondo oscuro */
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    background-color: transparent !important; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; /* Línea sutil grisácea */
+    box-shadow: none;
 }
 
-/* Espaciado del container-fluid para que toque los bordes laterales */
+/* Espaciado para que el contenido toque los bordes como en la referencia */
 .navbar .container-fluid {
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
-/* Cambiar el color del texto y logo de Instagram a blanco */
-.navbar-brand {
-    color: white !important;
-}
-.navbar-brand:hover {
-    color: #e0e0e0 !important;
+/* Logo e Icono en Negro */
+.navbar-brand, 
+.navbar-brand i {
+    color: black !important;
+    font-weight: 600;
 }
 
-/* --- Botones --- */
+.navbar-brand:hover {
+    color: #262626 !important;
+}
+
+/* --- Botones de la Navbar --- */
 .btn-custom-green {
-    background-color: #28a745;
-    color: white;
+    background-color: #198754; /* Verde Bootstrap Success */
+    color: white !important;
     border: none;
     border-radius: 4px;
     font-weight: 500;
+    padding: 6px 12px;
 }
 
-.btn-custom-green:hover {
-    background-color: #218838;
-    color: white;
-}
-
-/* --- Dropdown Estilo Captura (Engranaje) --- */
+/* Botón de Engranaje (Gris) */
 .custom-dropdown-btn {
     background-color: #6c757d !important;
+    color: white !important;
     border: none;
     border-radius: 4px;
-    padding: 0.375rem 0.75rem;
 }
 
+/* --- Dropdown (Menú desplegable) --- */
 .custom-dropdown-menu {
-    border-radius: 0; /* Bordes rectos */
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .custom-dropdown-menu .dropdown-item {
     font-size: 0.9rem;
-    color: #333;
-    padding: 8px 15px;
+    padding: 8px 16px;
 }
 
 .text-custom-danger {
-    color: #dc3545 !important;
+    color: #ed4956 !important; /* Rojo Instagram para Log out */
 }
 
-/* --- Tabs --- */
+/* --- Selector de Vista (Pills) --- */
 .toggle-btn {
-    color: #6c757d;
+    color: #8e8e8e;
     background: transparent !important;
-    border-radius: 0 !important;
+    border: none !important;
+    font-size: 1.2rem;
 }
 
 .nav-pills .nav-link.active.toggle-btn {
-    color: #0d6efd;
+    color: #0095f6 !important; /* Azul activo */
     background: transparent !important;
 }
 
-/* --- Vista de Cuadrícula (3x3) --- */
+/* --- Vista de Cuadrícula (Grid 3x3) --- */
 .grid-img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -82,15 +84,25 @@ body {
     display: block;
 }
 
-/* --- Tarjetas del Feed (Una por fila) --- */
+/* --- Vista de Feed (Tarjetas) --- */
 .post-card {
-    border-radius: 0;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom: 25px;
 }
 
 .post-card .card-header {
-    border-bottom: none;
+    background-color: white;
+    border-bottom: 1px solid #efefef;
+    padding: 12px 16px;
 }
 
 .post-card img {
     border-radius: 0;
+    width: 100%;
+}
+
+.post-card .card-body {
+    padding: 12px 16px;
 }
