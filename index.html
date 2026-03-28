@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instagram Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-instagram fs-4 me-2"></i>
+                <span class="fw-semibold">Instagram</span>
+            </a>
+
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-custom-green me-3" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                    Create a new post
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-gear-fill me-1"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end mt-2">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3">
+        <ul class="nav nav-pills justify-content-center" id="view-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active toggle-btn" id="grid-tab" data-bs-toggle="pill" data-bs-target="#grid-view" type="button" role="tab" aria-selected="true">
+                    <i class="bi bi-grid-3x3"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link toggle-btn" id="feed-tab" data-bs-toggle="pill" data-bs-target="#feed-view" type="button" role="tab" aria-selected="false">
+                    <i class="bi bi-square-fill"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container tab-content pb-5" id="view-tabsContent">
+        
+        <div class="tab-pane fade show active" id="grid-view" role="tabpanel" aria-labelledby="grid-tab">
+            <div class="row g-1">
+                <div class="col-4">
+                    <img src="https://images.unsplash.com/photo-1537151608804-ea2d1420d9ae?auto=format&fit=crop&q=80&w=800" alt="Dog" class="grid-img">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="People" class="grid-img">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.unsplash.com/photo-1555990538-232185c78602?auto=format&fit=crop&q=80&w=800" alt="City" class="grid-img">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?auto=format&fit=crop&q=80&w=800" alt="Woman" class="grid-img">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800" alt="Paris" class="grid-img">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&q=80&w=800" alt="Soccer" class="grid-img">
+                </div>
+                </div>
+        </div>
+
+        <div class="tab-pane fade" id="feed-view" role="tabpanel" aria-labelledby="feed-tab">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    
+                    <div class="card mb-4 post-card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fs-6 fw-bold">My Crazy dog Spark!</h5>
+                            <small class="text-muted">08/26</small>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1537151608804-ea2d1420d9ae?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Dog">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">204 Likes</h6>
+                            <p class="card-text text-muted">This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 post-card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fs-6 fw-bold">The greatness of Croatia</h5>
+                            <small class="text-muted">04/09</small>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1555990538-232185c78602?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="City">
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold">20683 Likes</h6>
+                            <p class="card-text text-muted">This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="createPostModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="postCaption" class="form-label fw-semibold">Caption:</label>
+                        <textarea class="form-control" id="postCaption" rows="3" placeholder="Add the caption of your post here"></textarea>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-light border"><i class="bi bi-camera"></i></button>
+                        <button class="btn btn-light border"><i class="bi bi-geo-alt"></i></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-custom-green">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
