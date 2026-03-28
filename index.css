@@ -7,30 +7,24 @@ body {
 /* --- NAVBAR REFINADA (Transparente con texto Negro) --- */
 .navbar {
     background-color: transparent !important; 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; /* Línea sutil grisácea */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: none;
 }
 
-/* Espaciado para que el contenido toque los bordes como en la referencia */
 .navbar .container-fluid {
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
-/* Logo e Icono en Negro */
 .navbar-brand, 
 .navbar-brand i {
     color: black !important;
     font-weight: 600;
 }
 
-.navbar-brand:hover {
-    color: #262626 !important;
-}
-
 /* --- Botones de la Navbar --- */
 .btn-custom-green {
-    background-color: #198754; /* Verde Bootstrap Success */
+    background-color: #198754;
     color: white !important;
     border: none;
     border-radius: 4px;
@@ -38,7 +32,6 @@ body {
     padding: 6px 12px;
 }
 
-/* Botón de Engranaje (Gris) */
 .custom-dropdown-btn {
     background-color: #6c757d !important;
     color: white !important;
@@ -46,37 +39,40 @@ body {
     border-radius: 4px;
 }
 
-/* --- Dropdown (Menú desplegable) --- */
 .custom-dropdown-menu {
     border-radius: 4px;
     border: 1px solid #dbdbdb;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-}
-
-.custom-dropdown-menu .dropdown-item {
-    font-size: 0.9rem;
-    padding: 8px 16px;
 }
 
 .text-custom-danger {
-    color: #ed4956 !important; /* Rojo Instagram para Log out */
+    color: #ed4956 !important;
 }
 
-/* --- Selector de Vista (Pills) --- */
-.toggle-btn {
-    color: #8e8e8e;
-    background: transparent !important;
+/* --- SELECTOR DE VISTA (Iconos Minimalistas) --- */
+.view-selector-container {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.view-tab-btn {
+    color: #8e8e8e !important; /* Gris por defecto */
+    background-color: transparent !important; /* Sin fondo azul */
     border: none !important;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding: 5px 15px !important;
 }
 
-.nav-pills .nav-link.active.toggle-btn {
-    color: #0095f6 !important; /* Azul activo */
-    background: transparent !important;
+.view-tab-btn.active {
+    color: #0095f6 !important; /* Azul solo cuando está seleccionado */
+    background-color: transparent !important; /* Asegurar que no hay fondo */
 }
 
-/* --- Vista de Cuadrícula (Grid 3x3) --- */
+.view-tab-btn:hover {
+    color: #262626 !important;
+}
+
+/* --- Vista de Cuadrícula --- */
 .grid-img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -99,8 +95,8 @@ body {
 }
 
 .post-card img {
-    border-radius: 0;
     width: 100%;
+    display: block;
 }
 
 .post-card .card-body {
