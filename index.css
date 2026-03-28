@@ -1,0 +1,46 @@
+/* Color verde personalizado que se ve en la captura */
+.btn-custom-green {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-custom-green:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* Estilos para que las imágenes del Grid sean cuadradas perfectas */
+.grid-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ajustes para los botones de cambio de vista (Grid vs Feed) */
+.toggle-btn {
+    color: #6c757d;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0.5rem 1rem;
+}
+
+/* El botón activo se pone azul según la captura */
+.nav-pills .nav-link.active.toggle-btn {
+    color: #0d6efd;
+    background: transparent !important;
+}
+
+/* Ajustes visuales para las tarjetas en la vista de lista */
+.post-card {
+    border-radius: 0;
+}
+
+.post-card .card-header {
+    border-bottom: none;
+}
+
+.post-card img {
+    border-radius: 0;
+}
