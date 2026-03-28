@@ -1,112 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Clone - Single Column Grid</title>
+    <title>Instagram Clone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-light">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2">
+    <nav class="navbar navbar-light bg-light border-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="bi bi-instagram fs-4 me-2"></i>
-                <span class="fw-semibold">Instagram</span>
+                <i class="bi bi-instagram me-2 fs-4"></i>
+                <span class="fw-bold">Instagram</span>
             </a>
-
             <div class="d-flex align-items-center">
-                <button type="button" class="btn btn-custom-green me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
                     Create a new post
                 </button>
-
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle d-flex align-items-center custom-dropdown-btn"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                         <i class="bi bi-gear-fill"></i>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu mt-1">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Accesibility</a></li>
                         <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-custom-danger" href="#">Log out</a></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container my-3">
-        <ul class="nav nav-pills justify-content-center" id="view-tabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active toggle-btn" id="grid-tab" data-bs-toggle="pill"
-                    data-bs-target="#grid-view" type="button" role="tab" aria-selected="true">
+    <div class="container-fluid bg-white border-bottom py-2 mb-4">
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active btn-view" id="pills-grid-tab" data-bs-toggle="pill" data-bs-target="#pills-grid">
                     <i class="bi bi-grid-3x3"></i>
                 </button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link toggle-btn" id="feed-tab" data-bs-toggle="pill" 
-                    data-bs-target="#feed-view" type="button" role="tab" aria-selected="false">
+            <li class="nav-item">
+                <button class="nav-link btn-view" id="pills-feed-tab" data-bs-toggle="pill" data-bs-target="#pills-feed">
                     <i class="bi bi-square-fill"></i>
                 </button>
             </li>
         </ul>
     </div>
 
-    <div class="container tab-content pb-5" id="view-tabsContent">
+    <div class="tab-content" id="pills-tabContent">
+        
+        <div class="tab-pane fade show active container" id="pills-grid">
+            <div class="row g-3">
+                <div class="col-4"><div class="ratio ratio-1x1 bg-secondary"><img src="https://picsum.photos/id/237/400" class="img-grid" alt="post"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1 bg-secondary"><img src="https://picsum.photos/id/1/400" class="img-grid" alt="post"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1 bg-secondary"><img src="https://picsum.photos/id/10/400" class="img-grid" alt="post"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1 bg-secondary"><img src="https://picsum.photos/id/20/400" class="img-grid" alt="post"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1 bg-secondary"><img src="https://picsum.photos/id/30/400" class="img-grid" alt="post"></div></div>
+                <div class="col-4"><div class="ratio ratio-1x1 bg-secondary"><img src="https://picsum.photos/id/40/400" class="img-grid" alt="post"></div></div>
+            </div>
+        </div>
 
-        <div class="tab-pane fade show active" id="grid-view" role="tabpanel" aria-labelledby="grid-tab">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6">
-                    <div class="mb-3">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP.M2FVcf_9-lCO3SZEZ8u_mAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="grid-img" alt="Dog">
-                    </div>
-                    <div class="mb-3">
-                        <img src="https://atlasanimal.com/wp-content/uploads/2021/02/Felinos-Raros.jpg" class="grid-img" alt="Felinos">
-                    </div>
-                    <div class="mb-3">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.rk2IHMIe6eLnG13kzL3HXwHaE4?rs=1&pid=ImgDetMain&o=7&rm=3" class="grid-img" alt="Sloth">
-                    </div>
-                    <div class="mb-3">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.8tX8HNKn2WkmzgJ55__DKwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3" class="grid-img" alt="Bird">
-                    </div>
-                    <div class="mb-3">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP.5guKgJ85pysnhCxv99mhngHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="grid-img" alt="Monkey">
-                    </div>
-                    <div class="mb-3">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP._0m_nXctycm0PVi8FgwBiAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" class="grid-img" alt="Perro">
+        <div class="tab-pane fade" id="pills-feed">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6">
+                        
+                        <div class="card mb-4 post-card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
+                                <h5 class="m-0 fs-6 fw-bold">My Crazy dog Spark!</h5>
+                                <small class="text-muted">08/26</small>
+                            </div>
+                            <img src="https://picsum.photos/id/237/600/400" class="card-img-top rounded-0" alt="post">
+                            <div class="card-body py-2 px-3">
+                                <p class="mb-1 fw-bold">204 Likes</p>
+                                <p class="mb-0 small">This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 post-card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
+                                <h5 class="m-0 fs-6 fw-bold">The greatness of Croatia</h5>
+                                <small class="text-muted">04/09</small>
+                            </div>
+                            <img src="https://picsum.photos/id/10/600/400" class="card-img-top rounded-0" alt="post">
+                            <div class="card-body py-2 px-3">
+                                <p class="mb-1 fw-bold">26985 Likes</p>
+                                <p class="mb-0 small">This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="tab-pane fade" id="feed-view" role="tabpanel" aria-labelledby="feed-tab">
-            </div>
     </div>
 
-    <div class="modal fade" id="createPostModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="createPostModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5">Create a new post</h1>
+                    <h5 class="modal-title">Create a new post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label fw-semibold">Caption:</label>
-                    <textarea class="form-control mb-3" rows="3" placeholder="Add the caption here"></textarea>
-                    <div class="d-flex gap-2">
-                        <button class="btn btn-light border"><i class="bi bi-camera"></i></button>
-                        <button class="btn btn-light border"><i class="bi bi-geo-alt"></i></button>
+                    <label class="fw-bold mb-1">Caption:</label>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Add the caption of your post here"></textarea>
+                    <div class="d-flex gap-1">
+                        <button class="btn btn-light border btn-sm"><i class="bi bi-camera-fill"></i></button>
+                        <button class="btn btn-light border btn-sm"><i class="bi bi-geo-alt-fill"></i></button>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-custom-green">Publish</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success btn-sm">Publish</button>
                 </div>
             </div>
         </div>
