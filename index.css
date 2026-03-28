@@ -1,11 +1,11 @@
-/* Estilos Generales */
+/* Ajustes generales */
 body {
     background-color: #fafafa;
 }
 
-/* Navbar */
-.navbar {
-    padding: 0.5rem 0;
+/* Navbar: Se eliminó el limite de ancho para que llegue a las esquinas */
+.navbar .container-fluid {
+    width: 100%;
 }
 
 /* Botones de Vista (Pills) */
@@ -13,39 +13,43 @@ body {
     color: #a0a0a0 !important;
     background-color: transparent !important;
     border: none !important;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .btn-view.active {
-    color: #0d6efd !important; /* Azul de selección */
+    color: #0d6efd !important;
 }
 
-/* Imágenes del Grid 3x3 */
+/* Imagenes del Grid */
 .img-grid {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-/* Tarjetas (Feed de 1 columna) */
+/* Estilo de Tarjeta IG */
 .post-card {
+    background-color: white;
     border: 1px solid #dbdbdb;
-    border-radius: 4px; /* Bordes ligeramente redondeados */
-    overflow: hidden;
+    border-radius: 3px;
 }
 
 .post-card .card-header {
     border-bottom: 1px solid #efefef;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
-.post-card .card-body {
-    background-color: white;
+/* Botón Gear (Gris) */
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
 }
 
-/* Botón modal verde */
+/* Botón Create (Verde) */
 .btn-success {
     background-color: #198754;
-    border-color: #198754;
+}
+
+/* Quitar la flecha del dropdown si lo prefieres mas limpio */
+.dropdown-toggle::after {
+    display: none;
 }
