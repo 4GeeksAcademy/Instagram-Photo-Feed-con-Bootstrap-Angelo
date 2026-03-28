@@ -1,4 +1,3 @@
-/* Color verde personalizado que se ve en la captura */
 .btn-custom-green {
     background-color: #28a745;
     color: white;
@@ -10,7 +9,7 @@
     color: white;
 }
 
-/* Estilos para que las imágenes del Grid sean cuadradas perfectas */
+
 .grid-img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -26,7 +25,6 @@
     padding: 0.5rem 1rem;
 }
 
-/* El botón activo se pone azul según la captura */
 .nav-pills .nav-link.active.toggle-btn {
     color: #0d6efd;
     background: transparent !important;
