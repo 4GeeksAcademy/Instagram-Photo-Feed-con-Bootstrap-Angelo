@@ -4,31 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Clone | Bootstrap Professional</title>
+    <title>Instagram Clone | Senior Dev Edition</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="index.css">
+    <style>
+        /* Pequeño ajuste para que las imágenes del grid no se deformen */
+        .grid-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
 
-    <header class="navbar sticky-top bg-white border-bottom py-2">
+    <header class="navbar sticky-top bg-white border-bottom py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="/">
-                <i class="bi bi-instagram fs-4"></i>
-                <span class="fw-bold d-none d-sm-inline">Instagram</span>
+            <a class="navbar-brand d-flex align-items-center m-0" href="#">
+                <i class="bi bi-instagram me-2 fs-4"></i>
+                <span class="fw-bold">Instagram</span>
             </a>
 
-            <div class="d-flex align-items-center gap-3">
-                <button class="btn btn-success fw-semibold btn-sm px-3" data-bs-toggle="modal" data-bs-target="#createPostModal">
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-success fw-semibold" data-bs-toggle="modal" data-bs-target="#createPostModal">
                     Create a new post
                 </button>
 
                 <div class="dropdown">
-                    <button class="btn btn-outline-secondary border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Settings">
+                    <button class="btn btn-outline-dark border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-gear-fill"></i>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow mt-2">
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm mt-2">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Accessibility</a></li>
                         <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
@@ -40,15 +48,15 @@
         </div>
     </header>
 
-    <nav class="view-selector bg-white border-bottom mb-4" aria-label="View selection">
+    <nav class="view-selector-container bg-white border-bottom mb-4" aria-label="Selector de vista">
         <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link view-tab-btn" id="pills-grid-tab" data-bs-toggle="pill" data-bs-target="#pills-grid" type="button" role="tab" aria-controls="pills-grid" aria-selected="false">
+                <button class="nav-link view-tab-btn" id="pills-grid-tab" data-bs-toggle="pill" data-bs-target="#pills-grid" type="button" role="tab">
                     <i class="bi bi-grid-3x3"></i>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link active view-tab-btn" id="pills-feed-tab" data-bs-toggle="pill" data-bs-target="#pills-feed" type="button" role="tab" aria-controls="pills-feed" aria-selected="true">
+                <button class="nav-link active view-tab-btn" id="pills-feed-tab" data-bs-toggle="pill" data-bs-target="#pills-feed" type="button" role="tab">
                     <i class="bi bi-square-fill"></i>
                 </button>
             </li>
@@ -56,14 +64,28 @@
     </nav>
 
     <main class="tab-content" id="pills-tabContent">
+
         <section class="tab-pane fade container" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
-            <div class="row g-2 g-md-3">
+            <div class="row g-3">
                 <div class="col-4">
-                    <div class="ratio ratio-1x1 overflow-hidden rounded">
-                        <img src="https://picsum.photos/id/237/400" class="object-fit-cover w-100 h-100" alt="Dog post photo">
-                    </div>
+                    <div class="ratio ratio-1x1"><img src="https://picsum.photos/id/237/400" class="grid-img rounded" alt="Perro"></div>
                 </div>
+                <div class="col-4">
+                    <div class="ratio ratio-1x1"><img src="https://picsum.photos/id/1/400" class="grid-img rounded" alt="Laptop"></div>
                 </div>
+                <div class="col-4">
+                    <div class="ratio ratio-1x1"><img src="https://picsum.photos/id/10/400" class="grid-img rounded" alt="Bosque"></div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-1x1"><img src="https://picsum.photos/id/64/400" class="grid-img rounded" alt="Persona"></div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-1x1"><img src="https://picsum.photos/id/43/400" class="grid-img rounded" alt="Arquitectura"></div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-1x1"><img src="https://picsum.photos/id/26/400" class="grid-img rounded" alt="Estadio"></div>
+                </div>
+            </div>
         </section>
 
         <section class="tab-pane fade show active" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
@@ -71,31 +93,72 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 col-lg-6">
                         
-                        <article class="card mb-4 post-card shadow-sm border-1">
+                        <article class="card mb-4 post-card shadow-sm">
                             <header class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
                                 <h2 class="m-0 fs-6 fw-bold">My Crazy dog Spark!</h2>
-                                <time datetime="2026-08-26" class="text-muted small">08/26</time>
+                                <time class="text-muted small">08/26</time>
                             </header>
-                            
-                            <img src="https://picsum.photos/id/237/800/600" class="img-fluid" alt="Black dog posing">
-                            
+                            <img src="https://picsum.photos/id/237/800/600" class="img-fluid" alt="Dog">
                             <footer class="card-body py-2 px-3">
                                 <p class="mb-1 fw-bold">204 Likes</p>
-                                <p class="mb-0 small">
-                                    <strong>sparky_user</strong> Very good photo!
-                                </p>
+                                <p class="mb-0 small">Very good photo!</p>
                             </footer>
                         </article>
 
-                        </div>
+                        <article class="card mb-4 post-card shadow-sm">
+                            <header class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
+                                <h2 class="m-0 fs-6 fw-bold">Greatness of Croatia</h2>
+                                <time class="text-muted small">04/09</time>
+                            </header>
+                            <img src="https://picsum.photos/id/10/800/600" class="img-fluid" alt="Croatia">
+                            <footer class="card-body py-2 px-3">
+                                <p class="mb-1 fw-bold">26k Likes</p>
+                                <p class="mb-0 small">Amazing view.</p>
+                            </footer>
+                        </article>
+
+                        <article class="card mb-4 post-card shadow-sm">
+                            <header class="card-header bg-white d-flex justify-content-between align-items-center py-2 px-3">
+                                <h2 class="m-0 fs-6 fw-bold">Cristiano Goal!</h2>
+                                <time class="text-muted small">06/12</time>
+                            </header>
+                            <img src="https://picsum.photos/id/26/800/600" class="img-fluid" alt="Goal">
+                            <footer class="card-body py-2 px-3">
+                                <p class="mb-1 fw-bold">1M Likes</p>
+                                <p class="mb-0 small">Pure class.</p>
+                            </footer>
+                        </article>
+
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal fade" id="createPostModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="fw-bold mb-1 small">Caption:</label>
+                    <textarea class="form-control mb-3" rows="2" placeholder="Add the caption here"></textarea>
+                    <div class="d-flex gap-1">
+                        <button class="btn btn-light border btn-sm" title="Add photo"><i class="bi bi-camera-fill"></i></button>
+                        <button class="btn btn-light border btn-sm" title="Add location"><i class="bi bi-geo-alt-fill"></i></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success btn-sm px-3">Publish</button>
+                </div>
+            </div>
         </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
